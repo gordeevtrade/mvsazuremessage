@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="message" name="message" placeholder="Введите сообщение">
+                    <button type="submit" id="submitMessage" class="btn btn-primary">Отправить</button>
+                </div>
+        <div class="alert alert-success" id="successMessage" style="display: none;">Сообщение успешно отправлено</div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button id="showMessages" class="btn btn-secondary">Показать сообщения</button>
+            <button id="showAllMessages" class="btn btn-secondary">Показать все сообщения</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="messagesContainer" style="display: none;">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Сообщение</th>
+                    <th scope="col">Время</th>
+                </tr>
+            </thead>
+            <tbody id="messagesBody">
+       
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}
+
